@@ -1,0 +1,142 @@
+{
+  "name": "levanter@5.2.5",
+  "description": "",
+   "logo": "https://telegra.ph/file/54efddccf41281ad7ec51.jpg",
+  "keywords": ["noedjs"],
+  "success_url": "/",
+  "env": {
+    "ALWAYS_ONLINE": {
+      "description": "show bot number last seen as online",
+      "required": true,
+      "value": "false"
+    },
+    "LOG_MSG": {
+      "description": "Show whatsapp msgs in log",
+      "required": true,
+      "value": "false"
+    },
+    "SUDO": {
+      "description": "admin",
+      "required": true,
+      "value": "admin"
+    },
+    "PREFIX": {
+      "description": "prefix, check for more",
+      "required": true,
+      "value": "."
+    },
+    "SESSION_ID": {
+      "description": "session id",
+      "required": true,
+      "value": ""
+    },
+    "STICKER_PACKNAME": {
+      "description": "sticker pack info",
+      "required": true,
+      "value": "❤️,Gifted"
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name, same as above entered.",
+      "required": true,
+      "value": ""
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku account api key, https://dashboard.heroku.com/account",
+      "required": true,
+      "value": ""
+    },
+    "RMBG_KEY": {
+      "description": "API key from remove.bg, required for plugin rmbg",
+      "required": true,
+      "value": "DJwc34NaWmhXmDxEeh6YUEmm"
+    },
+    "LANGUAG": {
+      "description": "Default Language for tts or trt",
+      "required": true,
+      "value": "en"
+    },
+    "WARN_LIMIT": {
+      "description": "Maximum number of wanings to a person.",
+      "required": true,
+      "value": "5"
+    },
+    "FORCE_LOGOUT": {
+      "description": "In Some scenario have to logout web, Only such case make this true and back to false after logout.",
+      "required": true,
+      "value": "false"
+    },
+    "DISABLE_BOT": {
+      "description": "Example : jid,jid,... where bot not works in both ways.",
+      "required": true,
+      "value": "null"
+    },
+    "ANTILINK_MSG": {
+      "description": "Message send when antilink and action is kick.",
+      "required": true,
+      "value": "_Antilink Detected &mention kicked_"
+    },
+    "ANTISPAM_MSG": {
+      "description": "Message send when antispam.",
+      "required": true,
+      "value": "_Antispam Detected &mention kicked_"
+    },
+    "ANTIWORDS_MSG": {
+      "description": "Message send when antiword.",
+      "required": true,
+      "value": "_Antiword Detected &mention kicked_"
+    },
+    "ANTIWORDS": {
+      "description": "words that not allowed in chats.",
+      "required": true,
+      "value": "fuck, stupid"
+    },
+    "SS_TOKEN": {
+      "description": "token from https://app.screenshotapi.net/dashboard",
+      "required": false,
+      "value": ""
+    },
+    "REJECT_CALL": {
+      "description": "auto reject call, if set as true",
+      "required": true,
+      "value": "false"
+    },
+    "AUTO_STATUS_VIEW": {
+      "description": "view others status",
+      "required": true,
+      "value": "true"
+    },
+    "SEND_READ": {
+      "description": "send blue tick",
+      "required": true,
+      "value": "false"
+    },
+    "AJOIN": {
+      "description": "Accept Group join request(Group privacy)",
+      "required": true,
+      "value": "true"
+    },
+    "PERSONAL_MESSAGE": {
+      "description": "Send a Welcome message on personal chat",
+      "required": false,
+      "value": "null"
+    },
+    "DISABLE_START_MESSAGE": {
+      "description": "Disable start Message",
+      "required": true,
+      "value": "false"
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql:basic"
+    }
+  ],
+
+  "buildpacks": [{ "url": "https://github.com/heroku/heroku-buildpack-nodejs#latest" }],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
